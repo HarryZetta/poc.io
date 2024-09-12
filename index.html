@@ -68,6 +68,14 @@
             }
         }
     })
+
+    const host = document.querySelector("flowise-chatbot");
+    const shadow = host.shadowRoot;
+    var sheet = new CSSStyleSheet();
+    sheet.replaceSync("strong, h3 { color: #ffffff !important; }");
+
+    shadow.adoptedStyleSheets = [sheet];
+
     </script>
     <style>
         /* CSS to set background image for the body */
@@ -84,6 +92,5 @@
     <title>Document</title>
 </head>
 <body>
-    <div>hi</div>
 </body>
 </html>
